@@ -1,6 +1,6 @@
 import { test as base, Page } from '@playwright/test';
-import { users } from 'data/users';
-import LoginPage from 'pages/LoginPage';
+import { users } from '../data/users';
+import LoginPage from '../pages/LoginPage';
 
 
 interface AuthFixtures {
