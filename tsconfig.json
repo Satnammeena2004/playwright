@@ -7,12 +7,12 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "types": ["node", "@playwright/test"],
-    "paths": {
-      "@pages/*": ["pages/*"],
-      "@utils/*": ["utils/*"],
-      "@data/*": ["data/*"],
-      "@mytypes/*": ["types/*"]
-    }
+    // "paths": {
+    //   "@pages/*": ["pages/*"],
+    //   "@utils/*": ["utils/*"],
+    //   "@data/*": ["data/*"],
+    //   "@mytypes/*": ["types/*"]
+    // }
   },
   "include": ["**/*.ts"],
   "exclude": ["node-modules"]

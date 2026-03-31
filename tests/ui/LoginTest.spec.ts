@@ -1,6 +1,7 @@
 import test, { expect, Page } from "@playwright/test";
-import LoginPage from "@pages/LoginPage";
-import { loginScenarios, users } from "@data/users";
+import { loginScenarios } from "data/users";
+import LoginPage from "pages/LoginPage";
+
 
 
 

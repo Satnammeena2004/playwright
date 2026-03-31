@@ -1,7 +1,8 @@
-import CartPage from "@pages/CartPage";
-import InventoryPage from "@pages/InventoryPage";
-import { takeScreenshot } from "@utils/screenshots";
+
 import { expect, test } from "fixtures/auth";
+import CartPage from "pages/CartPage";
+import InventoryPage from "pages/InventoryPage";
+import { takeScreenshot } from "utils/screenshots";
 
 test.describe('Cart Tests @regression', () => {
 

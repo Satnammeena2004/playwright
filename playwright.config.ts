@@ -1,5 +1,4 @@
-// @ts-check
-import "tsconfig-paths/register";
+// import "tsconfig-paths/register";
 import { defineConfig, devices } from "@playwright/test";
 
 

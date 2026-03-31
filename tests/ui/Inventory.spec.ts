@@ -1,6 +1,7 @@
-import InventoryPage from "@pages/InventoryPage";
-import LoginPage from "@pages/LoginPage";
+
 import test from "@playwright/test";
+import InventoryPage from "pages/InventoryPage";
+import LoginPage from "pages/LoginPage";
 
 
 

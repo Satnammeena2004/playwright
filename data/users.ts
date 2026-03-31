@@ -1,4 +1,4 @@
-import { User } from "@mytypes/users";
+import { User } from "types/users";
 
 export const users: Record<string, User> = {
     standard: {
