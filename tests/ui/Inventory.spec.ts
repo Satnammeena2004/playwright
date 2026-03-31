@@ -7,7 +7,7 @@ import test from "@playwright/test";
 
 
 
-test.describe("Inventory tests", () => {
+test.describe("Inventory tests @smoke @regression", () => {
     test.beforeEach(async ({ page }) => {
         const loginpage = new LoginPage(page);
         await loginpage.login("standard_user", "secret_sauce");

@@ -8,10 +8,12 @@ class InventoryPage {
     private readonly productList: Locator;
     private readonly sortDropdown: Locator;
     private readonly cartBadge: Locator;
+    private readonly cartIcon: Locator;
 
     constructor(private page: Page) {
         this.productList = page.locator(".inventory_item");
         this.sortDropdown = page.locator("//select[@class='product_sort_container']");
+        this.cartIcon = page.locator("//span[@class='shopping_cart_badge']");
         this.cartBadge = page.locator("//a[@class='shopping_cart_link']");
     }
 
@@ -34,9 +36,18 @@ class InventoryPage {
         return names;
     }
 
+
+
     async goToCart(): Promise<void> {
-        await this.cartBadge.click();
+        await this.cartIcon.click();
         await expect(this.page).toHaveURL(/cart/i);
+    }
+    async getCartItemCount(): Promise<number> {
+        if (await this.cartBadge.isVisible()) {
+            const countText = await this.cartBadge.textContent();
+            return countText ? parseInt(countText) : 0;
+        }
+        return 0;
     }
     async sortBy(option: 'az' | 'za' | 'lohi' | 'hilo'): Promise<void> {
         await this.sortDropdown.selectOption(option);

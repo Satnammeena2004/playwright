@@ -39,22 +39,21 @@ class LoginPage {
     await expect(this.errorMessage).toBeVisible();
   }
 
-  async asswerionForErrorMessage() {
-
-    await expect(this.errorMessage).toBeVisible();
+  async assertionForErrorMessage(errorMessage: string): Promise<void> {
+    await expect(this.errorMessage).toHaveText(errorMessage);
   }
 
   async loginWithOnlyUsername(u_name: string) {
     await this.enterUsername(u_name)
     await this.clickLogin();
-    await this.asswerionForErrorMessage()
+    await this.assertionForErrorMessage("Epic sadface: Password is required")
 
 
   }
   async loginWithOnlyPassword(pass: string) {
     await this.enterPassword(pass)
     await this.clickLogin();
-    await this.asswerionForErrorMessage()
+    await this.assertionForErrorMessage("Epic sadface: Username is required")
 
 
   }
@@ -73,6 +72,9 @@ class LoginPage {
     await expect(this.page).toHaveURL(/inventory/i);
   }
 
+  async assertLoginSuccess(): Promise<void> {
+    await expect(this.page).toHaveURL(/inventory/i);
+  }
 }
 
 export default LoginPage;

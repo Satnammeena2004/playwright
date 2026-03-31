@@ -5,9 +5,13 @@
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "baseUrl": "./",
     "types": ["node", "@playwright/test"],
     "paths": {
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"],
+      "@data/*": ["data/*"],
+      "@mytypes/*": ["types/*"]
     }
   },
   "include": ["**/*.ts"],
