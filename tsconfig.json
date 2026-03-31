@@ -5,7 +5,10 @@
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "types": ["node", "@playwright/test"]
+    "types": ["node", "@playwright/test"],
+    "paths": {
+      "@pages/*": ["pages/*"]
+    }
   },
   "include": ["**/*.ts"],
   "exclude": ["node-modules"]
