@@ -6,7 +6,7 @@
   "scripts": {
     "test": "playwright test",
     "pretest": "tsc --incremental -p tsconfig.json",
-    "report": "pnpm exec playwright show-report",
+    "show-report": "pnpm exec playwright show-report",
     "clean": "rm -rf tests-out && rm -rf test-results && rm -rf playwright-report && rm -rf screenshots"
   },
   "keywords": [],

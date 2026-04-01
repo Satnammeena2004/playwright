@@ -19,7 +19,7 @@ class LoginPage {
   }
 
   async goto() {
-    await this.page.goto("https://www.saucedemo.com/");
+    await this.page.goto("/");
 
   }
   async login(u_name: string, pass: string) {
@@ -44,6 +44,7 @@ class LoginPage {
   }
 
   async loginWithOnlyUsername(u_name: string) {
+    await this.goto();
     await this.enterUsername(u_name)
     await this.clickLogin();
     await this.assertionForErrorMessage("Epic sadface: Password is required")
@@ -51,6 +52,7 @@ class LoginPage {
 
   }
   async loginWithOnlyPassword(pass: string) {
+    await this.goto();
     await this.enterPassword(pass)
     await this.clickLogin();
     await this.assertionForErrorMessage("Epic sadface: Username is required")

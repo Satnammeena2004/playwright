@@ -13,16 +13,16 @@ test.describe("Login Tests @smoke", () => {
     })
 
 
-    test("incorrect username and password should show error message", async ({ page }: { page: Page }) => {
+    test("incorrect username and password should show error message @negative", async ({ page }: { page: Page }) => {
         const loginpage = new LoginPage(page);
-        await loginpage.login("wringname", "wrongpass");
+        await loginpage.login("wrongname", "wrongpass");
     })
-    // test("one of the field is empty should show error message", async ({ page }: { page: Page }) => {
-    //     // test.skip(true)
-    //     const loginpage = new LoginPage(page);
-    //     await loginpage.loginWithOnlyUsername("standard_user");
-    //     // await loginpage.loginWithOnlyPassword("password");
-    // })
+    test("one of the field is empty should show error message @negative", async ({ page }: { page: Page }) => {
+        // test.skip(true)
+        const loginpage = new LoginPage(page);
+        await loginpage.loginWithOnlyUsername("standard_user");
+        // await loginpage.loginWithOnlyPassword("password");
+    })
 
 })
 

@@ -13,3 +13,4 @@ videos/
 trace/
 tests-out/
 trace.zip
+.env
