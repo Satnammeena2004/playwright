@@ -33,7 +33,7 @@ jobs:
         run: pnpm exec playwright install --with-deps
 
       - name: Run Playwright tests
-        run: pnpm  run test --grep @smoke --reporter=html --output=test-results
+        run: pnpm  run test --grep
 
       - name: Upload HTML report
         uses: actions/upload-artifact@v4

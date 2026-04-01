@@ -1,18 +1,20 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "module": "commonjs",
+    "module": "nodenext",
     "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
+    "ignoreDeprecations": "6.0",
+    "outDir": "tests-out",
     "baseUrl": "./",
     "types": ["node", "@playwright/test"],
-    // "paths": {
-    //   "@pages/*": ["pages/*"],
-    //   "@utils/*": ["utils/*"],
-    //   "@data/*": ["data/*"],
-    //   "@mytypes/*": ["types/*"]
-    // }
+    "paths": {
+      "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"],
+      "@data/*": ["data/*"],
+      "@mytypes/*": ["types/*"]
+    }
   },
   "include": ["**/*.ts"],
   "exclude": ["node-modules"]
