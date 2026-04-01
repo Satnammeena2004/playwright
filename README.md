@@ -26,23 +26,23 @@ pnpm install
 pnpm exec playwright install
 
 # Run all tests
-pnpm exec playwright test
+pnpm run playwright test
 
 # Run by tag
-pnpm exec playwright test --grep @smoke
-pnpm exec playwright test --grep @api
+pnpm run playwright test --grep @smoke
+pnpm run playwright test --grep @api
 
 # Run specific file
 pnpm exec playwright test tests/ui/login.spec.ts
 
 # Debug mode
-pnpm exec playwright test --debug
+pnpm run playwright test --debug
 
 # UI mode
-pnpm exec playwright test --ui
+pnpm run playwright test --ui
 
 # View report
-pnpm exec playwright show-report
+pnpm run playwright show-report
 ```
 
 ## Test Coverage
