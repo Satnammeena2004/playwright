@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "nodenext",
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "moduleResolution": "nodenext",
     "ignoreDeprecations": "6.0",
